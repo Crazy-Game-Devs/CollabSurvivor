@@ -1,9 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface BaseItemInterface
+public interface IActiveItem : IBaseItem
 {
-    public bool OnEquip();
+    public bool OnUse();
+
 }
