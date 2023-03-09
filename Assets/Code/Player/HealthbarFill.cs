@@ -5,30 +5,22 @@ using UnityEngine.Rendering;
 
 public class HealthbarFill : MonoBehaviour
 {
-    public float maxHealth = 100;
-    public float playerHealth;
+    BasePlayerStats basePlayerStats;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = maxHealth;
+        basePlayerStats = GameObject.Find("Player").gameObject.GetComponent<BasePlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            playerHealth -= 5;
-            Debug.Log("outch");
-        }
-
-
-        float newX = Mathf.Clamp(playerHealth / maxHealth, 0, 1);
+        float newX = Mathf.Clamp(basePlayerStats.Health / basePlayerStats.MaxHealth, 0, 1);
+        Debug.Log(newX);
 
         transform.localScale = new Vector3(newX, transform.localScale.y, transform.localScale.z);
 
         transform.localPosition = new Vector3(-transform.parent.localScale.x / 2 + (newX / 2), 0, -0.1f);
-
     }
 }
