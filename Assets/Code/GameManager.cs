@@ -33,12 +33,12 @@ public class GameManager : MonoBehaviour
 		SceneManager.LoadScene(1);
 	}
 
-	internal void StartGame()
+	public void StartGame()
 	{
 		SceneManager.LoadScene(2);
 	}
 
-	internal void QuitApplication()
+	public void QuitApplication()
 	{
 		//save Data here
 
