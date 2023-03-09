@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ActiveItemInterface : BaseItemInterface
+public interface IPassiveItem : IBaseItem
 {
-    public bool OnUse();
-
+    public bool OnSynergy();
 }
