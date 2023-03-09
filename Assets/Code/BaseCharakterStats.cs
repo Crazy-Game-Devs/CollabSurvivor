@@ -13,8 +13,8 @@ public abstract class BaseCharakterStats : MonoBehaviour
 
 	// Getter Setter
 	public float Health { get => health; protected set { health = value; } }
-	public float MaxHealth { get => maxHealth; protected set { maxHealth = value; } }
-	public float MoveSpeed { get => moveSpeed; protected set { moveSpeed = value; } }
+	public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+	public float MoveSpeed { get => moveSpeed;  set => moveSpeed = value; }
 
 
 	public void reciveDamage(float damage)
