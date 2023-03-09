@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
-		if(Instance == null)
+		if (Instance == null)
 		{
 			Instance = this;
 		}
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
 		DontDestroyOnLoad(this);
 		DontDestroyOnLoad(mainCamera);
-		StartCoroutine("ChangeToMainMenu");
+		StartCoroutine($"{nameof(ChangeToMainMenu)}");
 	}
 
 	private IEnumerator ChangeToMainMenu()
