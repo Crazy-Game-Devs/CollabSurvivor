@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IPassiveItem : IBaseItem
 {
-    public bool OnSynergy();
+
 }
