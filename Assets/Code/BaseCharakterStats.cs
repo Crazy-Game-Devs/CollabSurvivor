@@ -4,16 +4,22 @@ using UnityEngine;
 
 public abstract class BaseCharakterStats : MonoBehaviour
 {
-    [SerializeField]
-    private float health;
-    [SerializeField]
-    private float maxHealth;
-    [SerializeField]
-    private float moveSpeed;
+	[SerializeField]
+	private float health = 100;
+	[SerializeField]
+	private float maxHealth = 100;
+	[SerializeField]
+	private float moveSpeed = 1;
 
-    // Getter Setter
-    public float Health { get => health; protected set { health = value; } }
-    public float MaxHealth { get => maxHealth; protected set { maxHealth = value; } }
-    public float MoveSpeed { get => moveSpeed; protected set { moveSpeed = value; } }
+	// Getter Setter
+	public float Health { get => health; protected set { health = value; } }
+	public float MaxHealth { get => maxHealth; protected set { maxHealth = value; } }
+	public float MoveSpeed { get => moveSpeed; protected set { moveSpeed = value; } }
+
+
+	public void reciveDamage(float damage)
+	{
+		this.Health -= damage;
+	}
 
 }
