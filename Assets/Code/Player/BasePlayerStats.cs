@@ -41,4 +41,8 @@ public class BasePlayerStats : BaseCharakterStats
     public float PlayerSize { get => playerSize; set => playerSize = value; }
     public float CameraZoom { get => cameraZoom; set => cameraZoom = value; }
     public float DamagePercentage { get => damagePercentage; set => damagePercentage = value; }
+    public float CalcTotalDamage(float weaponDamage) 
+    {
+        return (damage + weaponDamage) * (1 + damagePercentage / 100);
+    }
 }

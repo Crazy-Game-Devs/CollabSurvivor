@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBaseMovement : MonoBehaviour
@@ -17,8 +18,15 @@ public class EnemyBaseMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPosition = playerPosition.position - transform.position;
-        newPosition.Normalize();
-        transform.position += enemyStats.MoveSpeed * Time.deltaTime * newPosition;
+        if (enemyStats.Health > 0) 
+        { 
+            Vector3 newPosition = playerPosition.position - transform.position;
+            newPosition.Normalize();
+            transform.position += enemyStats.MoveSpeed * Time.deltaTime * newPosition;
+        } 
+        else
+        {
+            enemyStats.Color = Color.gray;
+        }
     }
 }
