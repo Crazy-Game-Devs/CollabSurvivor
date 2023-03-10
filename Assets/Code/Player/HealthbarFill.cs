@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class HealthbarFill : MonoBehaviour
 {
-    BasePlayerStats basePlayerStats;
+    private BasePlayerStats basePlayerStats;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,6 @@ public class HealthbarFill : MonoBehaviour
     void Update()
     {
         float newX = Mathf.Clamp(basePlayerStats.Health / basePlayerStats.MaxHealth, 0, 1);
-        Debug.Log(newX);
 
         transform.localScale = new Vector3(newX, transform.localScale.y, transform.localScale.z);
 

@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class EnemyBaseMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 1.0f;
-    Transform playerPosition;
-
-
+    private BaseEnemyStats enemyStats;
+    private Transform playerPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         playerPosition = GameObject.Find("Player").GetComponent<Transform>();
+        enemyStats = GetComponent<BaseEnemyStats>();
     }
 
     // Update is called once per frame
@@ -21,6 +19,6 @@ public class EnemyBaseMovement : MonoBehaviour
     {
         Vector3 newPosition = playerPosition.position - transform.position;
         newPosition.Normalize();
-        transform.position += newPosition * moveSpeed * Time.deltaTime;
+        transform.position += enemyStats.MoveSpeed * Time.deltaTime * newPosition;
     }
 }
