@@ -14,7 +14,7 @@ public class ModifyDamage : MonoBehaviour, IPassiveItem
     {
         BasePlayerStats stats = GameObject.Find("Player").GetComponent<BasePlayerStats>();
         stats.Damage += bonusDamage;
-        stats.Damage *= 1 + bonusPercentageDamage / 100;
+        stats.DamagePercentage *= bonusPercentageDamage;
 
         return true;
     }

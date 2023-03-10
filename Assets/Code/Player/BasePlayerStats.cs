@@ -10,6 +10,9 @@ public class BasePlayerStats : BaseCharakterStats
     [SerializeField]
     private float damage;
 
+    [SerializeField] 
+    private float damagePercentage;
+
     [SerializeField]
     private float defence;
 
@@ -37,4 +40,5 @@ public class BasePlayerStats : BaseCharakterStats
     public float Range { get => range; set => range = value; }
     public float PlayerSize { get => playerSize; set => playerSize = value; }
     public float CameraZoom { get => cameraZoom; set => cameraZoom = value; }
+    public float DamagePercentage { get => damagePercentage; set => damagePercentage = value; }
 }

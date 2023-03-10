@@ -250,8 +250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840dc1a13d32e7e4192e980175865d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: 5
-  camera: {fileID: 0}
+  userView: {fileID: 0}
+  mapSize: {x: 30, y: 30}
 --- !u!114 &3427153084376167840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,8 +266,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
-  moveSpeed: 1
-  maxWeaponAmount: 0
+  moveSpeed: 5
+  maxWeaponAmount: 4
+  damage: 1
+  damagePercentage: 100
+  defence: 0
+  critChance: 5
+  critDamage: 100
+  range: 5
+  playerSize: 0
+  cameraZoom: 0
 --- !u!58 &2337969513035430195
 CircleCollider2D:
   m_ObjectHideFlags: 0

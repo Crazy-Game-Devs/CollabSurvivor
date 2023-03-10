@@ -9,7 +9,7 @@ public abstract class BaseCharakterStats : MonoBehaviour
 	[SerializeField]
 	private float maxHealth = 100;
 	[SerializeField]
-	private float moveSpeed = 1;
+	private float moveSpeed = 5;
 
 	// Getter Setter
 	public float Health { get => health; protected set { health = value; } }
