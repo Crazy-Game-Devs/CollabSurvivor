@@ -9,4 +9,5 @@ public class SpawnableEnemyInfo : ScriptableObject
     public float SpawnFrequency;
     public int minNumForGroupSpawns;
     public int maxNumForGroupSpawns;
+    public int maxNumberOnField;
 }

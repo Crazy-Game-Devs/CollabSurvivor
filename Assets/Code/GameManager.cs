@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject mainCamera;
+	[SerializeField]
+	private float gameSpeed;
 
 	public static GameManager Instance { get; protected set; }
+	public float GameSpeed { get => gameSpeed; set => gameSpeed = value; }
 
 	private void Start()
 	{
